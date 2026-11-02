@@ -75,3 +75,5 @@ details p{margin-top:10px;color:var(--muted)}
   .burger{display:block}.cart-btn{margin-left:auto}
 }
 @media(max-width:520px){.steps{grid-template-columns:1fr}.hero{padding:56px 0}}
+.about>p{color:var(--muted);max-width:800px;margin-bottom:28px;font-size:17px}
+.slogan{margin-top:32px;font-size:22px!important;font-weight:800;color:var(--text)!important}
