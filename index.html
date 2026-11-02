@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Toolvex — прокат инструментов онлайн</title>
-<meta name="description" content="Toolvex — онлайн-прокат строительного и электроинструмента с доставкой. Бронирование за 2 минуты.">
+<title>Toolvex — аренда инструментов и строительного оборудования</title>
+<meta name="description" content="Toolvex — современный сервис аренды инструментов и строительного оборудования. Бронируйте онлайн и экономьте на покупке.">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,6 +14,7 @@
     <nav class="nav" id="nav">
       <a href="#catalog">Каталог</a>
       <a href="#how">Как это работает</a>
+      <a href="#about">О нас</a>
       <a href="#faq">Вопросы</a>
       <a href="#contacts">Контакты</a>
     </nav>
@@ -25,14 +26,14 @@
 <section class="hero">
   <div class="container hero__inner">
     <div>
-      <h1>Инструмент в аренду — <span>без лишних затрат</span></h1>
-      <p>Перфораторы, бетономешалки, пилы, генераторы и ещё 500+ позиций. Оформите заказ онлайн — привезём в день обращения.</p>
+      <h1>Бери инструмент, <span>воплощай идеи!</span></h1>
+      <p>Toolvex — современный сервис аренды инструментов и строительного оборудования. Всё необходимое для ремонта, строительства и домашних проектов. Выбирайте, бронируйте онлайн и экономьте на покупке оборудования.</p>
       <div class="hero__actions">
         <a href="#catalog" class="btn btn--primary">Выбрать инструмент</a>
         <a href="#how" class="btn btn--ghost">Как это работает</a>
       </div>
       <ul class="hero__stats">
-        <li><b>500+</b>инструментов</li>
+        <li><b>65+</b>моделей</li>
         <li><b>от 2 ч</b>доставка</li>
         <li><b>24/7</b>онлайн-заказ</li>
       </ul>
@@ -45,10 +46,21 @@
   <div class="container">
     <h2>Каталог</h2>
     <div class="filters">
-      <input type="search" id="search" placeholder="Поиск инструмента…">
+      <div class="filters__row">
+        <input type="search" id="search" placeholder="Поиск по названию, бренду…" aria-label="Поиск">
+        <select id="brand" aria-label="Бренд"></select>
+        <select id="sort" aria-label="Сортировка">
+          <option value="default">По умолчанию</option>
+          <option value="price-asc">Сначала дешевле</option>
+          <option value="price-desc">Сначала дороже</option>
+          <option value="name">По названию</option>
+        </select>
+      </div>
       <div class="chips" id="chips"></div>
+      <p class="found" id="found" aria-live="polite"></p>
     </div>
     <div class="grid" id="grid"></div>
+    <nav class="pager" id="pager" aria-label="Страницы каталога"></nav>
   </div>
 </section>
 
@@ -64,6 +76,20 @@
   </div>
 </section>
 
+<section id="about" class="section section--alt">
+  <div class="container about">
+    <h2>О Toolvex</h2>
+    <p>Toolvex — современный сервис аренды инструментов и строительного оборудования. У нас вы найдёте всё необходимое для ремонта, строительства и домашних проектов: от шуруповёрта до виброплиты и бензогенератора.</p>
+    <div class="steps">
+      <div class="step"><i>✓</i><h3>Проверенная техника</h3><p>Профессиональные бренды, проверка и чистка после каждой аренды.</p></div>
+      <div class="step"><i>₽</i><h3>Экономия</h3><p>Аренда в 10–20 раз дешевле покупки, скидки до 20% на долгий срок.</p></div>
+      <div class="step"><i>⏱</i><h3>Онлайн-бронь</h3><p>Бронируйте за пару минут, без визита в офис.</p></div>
+      <div class="step"><i>🚚</i><h3>Доставка</h3><p>Привезём на объект в день заказа или подготовим к самовывозу.</p></div>
+    </div>
+    <p class="slogan">Toolvex — бери инструмент, воплощай идеи!</p>
+  </div>
+</section>
+
 <section id="faq" class="section">
   <div class="container faq">
     <h2>Частые вопросы</h2>
@@ -76,7 +102,7 @@
 
 <footer id="contacts" class="footer">
   <div class="container footer__inner">
-    <div><a href="#" class="logo">Tool<span>vex</span></a><p>Онлайн-прокат инструментов</p></div>
+    <div><a href="#" class="logo">Tool<span>vex</span></a><p>Бери инструмент, воплощай идеи!</p></div>
     <div><p>📞 +7 (000) 000-00-00</p><p>✉️ info@toolvex.ru</p><p>Ежедневно 8:00–22:00</p></div>
   </div>
   <div class="container copy">© <span id="year"></span> Toolvex</div>
