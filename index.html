@@ -46,10 +46,21 @@
   <div class="container">
     <h2>Каталог</h2>
     <div class="filters">
-      <input type="search" id="search" placeholder="Поиск инструмента…">
+      <div class="filters__row">
+        <input type="search" id="search" placeholder="Поиск по названию, бренду…" aria-label="Поиск">
+        <select id="brand" aria-label="Бренд"></select>
+        <select id="sort" aria-label="Сортировка">
+          <option value="default">По умолчанию</option>
+          <option value="price-asc">Сначала дешевле</option>
+          <option value="price-desc">Сначала дороже</option>
+          <option value="name">По названию</option>
+        </select>
+      </div>
       <div class="chips" id="chips"></div>
+      <p class="found" id="found" aria-live="polite"></p>
     </div>
     <div class="grid" id="grid"></div>
+    <nav class="pager" id="pager" aria-label="Страницы каталога"></nav>
   </div>
 </section>
 
