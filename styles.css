@@ -31,8 +31,10 @@ h2{font-size:34px;margin-bottom:28px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px}
 .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;display:flex;flex-direction:column;transition:.2s}
 .card:hover{box-shadow:0 10px 30px rgba(0,0,0,.08);transform:translateY(-2px)}
-.card__img{font-size:64px;text-align:center;background:var(--alt);border-radius:10px;padding:14px;margin-bottom:14px;height:150px;display:grid;place-items:center}
-.card__img img{display:block;width:100%;max-width:180px;height:122px;object-fit:contain;transition:transform .2s}
+.card__img{font-size:64px;text-align:center;background:var(--alt);border-radius:10px;margin-bottom:14px;height:170px;display:grid;place-items:center;overflow:hidden}
+.card__img img{display:block;transition:transform .3s}
+.card__img img.is-photo{width:100%;height:100%;object-fit:cover}
+.card__img img.is-illustration{width:100%;max-width:180px;height:122px;object-fit:contain}
 .card:hover .card__img img{transform:scale(1.05)}
 .card__cat{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
 .card h3{font-size:18px;margin:4px 0 6px}
@@ -60,7 +62,7 @@ details p{margin-top:10px;color:var(--muted)}
 .cart__head button{border:0;background:none;font-size:20px;cursor:pointer}
 .cart__items{flex:1;overflow:auto;padding:12px 20px}
 .ci{display:flex;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--border)}
-.ci__icon{font-size:30px;width:52px;flex:none;text-align:center}.ci__icon img{display:block;width:52px;height:39px;object-fit:contain}.ci__info{flex:1;font-size:14px}.ci__info small{color:var(--muted);display:block}
+.ci__icon{font-size:30px;width:52px;flex:none;text-align:center}.ci__icon img{display:block;width:52px;height:39px;object-fit:contain;border-radius:6px}.ci__icon img.is-photo{object-fit:cover}.ci__info{flex:1;font-size:14px}.ci__info small{color:var(--muted);display:block}
 .ci button{border:0;background:none;cursor:pointer;color:var(--muted);font-size:18px}
 .cart__foot{padding:20px;border-top:1px solid var(--border)}
 .cart__total{font-size:18px;margin-bottom:12px}
@@ -90,3 +92,7 @@ details p{margin-top:10px;color:var(--muted)}
 .pg.active{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:700}
 .pg:disabled{opacity:.4;cursor:default}
 .pg-gap{color:var(--muted);padding:0 4px}
+.copy a{text-decoration:underline}.copy a:hover{color:#fff}
+.card__img{position:relative}
+.card__credit{position:absolute;right:6px;bottom:6px;font-size:11px;line-height:1;padding:4px 7px;border-radius:999px;background:rgba(26,29,35,.62);color:#fff;opacity:.85}
+.card__credit:hover{opacity:1;background:rgba(26,29,35,.85)}
