@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Toolvex — прокат инструментов онлайн</title>
+<meta name="description" content="Toolvex — онлайн-прокат строительного и электроинструмента с доставкой. Бронирование за 2 минуты.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header">
+  <div class="container header__inner">
+    <a href="#" class="logo">Tool<span>vex</span></a>
+    <nav class="nav" id="nav">
+      <a href="#catalog">Каталог</a>
+      <a href="#how">Как это работает</a>
+      <a href="#faq">Вопросы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <button class="cart-btn" id="cartBtn" aria-label="Корзина">🛒 <span id="cartCount">0</span></button>
+    <button class="burger" id="burger" aria-label="Меню">☰</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero__inner">
+    <div>
+      <h1>Инструмент в аренду — <span>без лишних затрат</span></h1>
+      <p>Перфораторы, бетономешалки, пилы, генераторы и ещё 500+ позиций. Оформите заказ онлайн — привезём в день обращения.</p>
+      <div class="hero__actions">
+        <a href="#catalog" class="btn btn--primary">Выбрать инструмент</a>
+        <a href="#how" class="btn btn--ghost">Как это работает</a>
+      </div>
+      <ul class="hero__stats">
+        <li><b>500+</b>инструментов</li>
+        <li><b>от 2 ч</b>доставка</li>
+        <li><b>24/7</b>онлайн-заказ</li>
+      </ul>
+    </div>
+    <div class="hero__art" aria-hidden="true">🛠️</div>
+  </div>
+</section>
+
+<section id="catalog" class="section">
+  <div class="container">
+    <h2>Каталог</h2>
+    <div class="filters">
+      <input type="search" id="search" placeholder="Поиск инструмента…">
+      <div class="chips" id="chips"></div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section id="how" class="section section--alt">
+  <div class="container">
+    <h2>Как это работает</h2>
+    <div class="steps">
+      <div class="step"><i>1</i><h3>Выберите</h3><p>Найдите инструмент в каталоге и укажите срок аренды.</p></div>
+      <div class="step"><i>2</i><h3>Оформите</h3><p>Оставьте заявку — менеджер подтвердит за 10 минут.</p></div>
+      <div class="step"><i>3</i><h3>Получите</h3><p>Доставка курьером или самовывоз с пункта выдачи.</p></div>
+      <div class="step"><i>4</i><h3>Верните</h3><p>Заберём сами или привезите в удобное время.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="section">
+  <div class="container faq">
+    <h2>Частые вопросы</h2>
+    <details><summary>Нужен ли залог?</summary><p>Да, залог зависит от стоимости инструмента и возвращается полностью при возврате в исправном состоянии.</p></details>
+    <details><summary>Какие документы нужны?</summary><p>Паспорт для физлиц; для юрлиц — договор и реквизиты.</p></details>
+    <details><summary>Что если инструмент сломается?</summary><p>Мы бесплатно заменим инструмент, если поломка не связана с нарушением правил эксплуатации.</p></details>
+    <details><summary>Есть ли скидки на долгую аренду?</summary><p>От 3 дней — скидка 10%, от 7 дней — 20%. Скидка считается автоматически в корзине.</p></details>
+  </div>
+</section>
+
+<footer id="contacts" class="footer">
+  <div class="container footer__inner">
+    <div><a href="#" class="logo">Tool<span>vex</span></a><p>Онлайн-прокат инструментов</p></div>
+    <div><p>📞 +7 (000) 000-00-00</p><p>✉️ info@toolvex.ru</p><p>Ежедневно 8:00–22:00</p></div>
+  </div>
+  <div class="container copy">© <span id="year"></span> Toolvex</div>
+</footer>
+
+<aside class="cart" id="cart" aria-hidden="true">
+  <div class="cart__head"><h3>Корзина</h3><button id="cartClose" aria-label="Закрыть">✕</button></div>
+  <div class="cart__items" id="cartItems"></div>
+  <div class="cart__foot">
+    <div class="cart__total">Итого: <b id="cartTotal">0 ₽</b></div>
+    <form id="orderForm" class="order">
+      <input required name="name" placeholder="Имя">
+      <input required name="phone" type="tel" placeholder="Телефон">
+      <input name="address" placeholder="Адрес доставки (необязательно)">
+      <button class="btn btn--primary" type="submit">Оформить заказ</button>
+    </form>
+  </div>
+</aside>
+<div class="overlay" id="overlay"></div>
+<div class="toast" id="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
